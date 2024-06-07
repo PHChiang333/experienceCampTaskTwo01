@@ -1,0 +1,552 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0px 12px;
+  font-family: "Noto Sans", serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.fs-4 {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.fs-5 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.fs-6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.h4-BootstrapHeading {
+  font-size: 24px;
+  line-height: 28.8px;
+}
+
+.h3-Worktitle {
+  font-size: 28px;
+  line-height: 33.6px;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .h3-Worktitle {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.ml-8 {
+  margin-left: 8px;
+}
+
+.p-8-24 {
+  padding: 8px 24px;
+}
+
+@media (max-width: 767px) {
+  .p-8-24 {
+    padding: 4px 24px;
+  }
+}
+
+.left-n72 {
+  position: absolute;
+  left: -71px;
+}
+
+.top-n59 {
+  position: absolute;
+  top: -59px;
+}
+
+.right-n72 {
+  position: absolute;
+  right: -71px;
+}
+
+.bottom-n59 {
+  position: absolute;
+  bottom: -59px;
+}
+
+/* header */
+
+.header {
+  background: #ffffff;
+}
+
+.containerHeader {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  /* phone */
+  .containerHeader {
+    max-width: 100%;
+    align-items: start;
+  }
+}
+
+.boxLogo {
+  position: absolute;
+  z-index: 10;
+  left: 0px;
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+@media (max-width: 767px) {
+  .menu {
+    /* display: none; */
+    margin-top: 60px;
+    flex-direction: column;
+    gap: 0;
+    width: 95%;
+  }
+}
+
+.menu-item {
+  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.menu-item a:hover::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #919191;
+  border-left: 1px solid #919191;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.menu-item a:hover::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid #919191;
+  border-right: 1px solid #919191;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.menuBtn {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .menuBtn {
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 10;
+    right: 0px;
+  }
+
+  .menuBtn:hover {
+    background-color: #808080;
+  }
+
+  .active,
+  .menuBtn.active:hover {
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  .close {
+    display: none;
+  }
+}
+
+/* banner */
+
+.banner {
+  background: #fafafa;
+}
+
+.containerBanner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (max-width: 767px) {
+  .containerBanner {
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 37.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.boxSlogan {
+  position: relative;
+  margin: 59px 71px;
+  z-index: 5;
+}
+
+@media (max-width: 767px) {
+  .boxSlogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+}
+
+.slogan {
+  color: #1e1e1e;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .slogan {
+    width: 300px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .slogan.mb-16 {
+    margin-bottom: 8px;
+  }
+  .wrap {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .sloganImgQuote.left-n72.top-n59 {
+    width: 64px;
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .sloganImgQuote.right-n72.bottom-n59 {
+    display: none;
+  }
+}
+
+.slogan.h4-BootstrapHeading.mb-16:before {
+  content: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/mark.png);
+  position: absolute;
+  right: -5px;
+  top: 7px;
+  z-index: -5;
+}
+
+@media (max-width: 767px) {
+  .slogan.h4-BootstrapHeading.mb-16:before {
+    transform: scale(0.7);
+    right: 55px;
+    top: 100px;
+  }
+}
+
+.slogan.h4-BootstrapHeading.mb-16:after {
+  content: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/mark.png);
+  position: absolute;
+  right: 11px;
+  top: 52px;
+  z-index: -5;
+}
+
+@media (max-width: 767px) {
+  .slogan.h4-BootstrapHeading.mb-16:after {
+    transform: scale(0.7);
+    right: 55px;
+    top: 168px;
+  }
+}
+
+.boxExperience {
+  max-width: 626px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .boxExperience {
+    max-width: 235px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+.experienceTitle {
+  color: #5b5b5b;
+}
+
+.experienceTitle::after {
+  content: "";
+  display: block;
+  width: 24px;
+  border-bottom: 3px solid #c1c1c1;
+  margin: 4px auto 8px auto;
+}
+
+.experienceText {
+  color: #3b3b3b;
+}
+
+/* content */
+
+.content {
+  background: #ffffff;
+}
+
+.containerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+@media (max-width: 767px) {
+  .containerContent {
+    width: 100%;
+    padding: 80px 0;
+  }
+}
+
+.listWorks {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+@media (max-width: 767px) {
+  .listWorks {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+}
+
+.work {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 767px) {
+  .work {
+    margin-bottom: 0;
+  }
+}
+
+.boxWorkImg {
+  width: 100%;
+  background: #d1bd84;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
+}
+
+@media (max-width: 767px) {
+  .boxWorkImg {
+    background: #d1bd84;
+    border-radius: 4px;
+    border: 0.55px solid #f1f1f1;
+  }
+}
+
+.workImg {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  .workImg {
+    border-radius: 4px;
+  }
+}
+
+.boxWorkDescription {
+  padding: 0 16px;
+}
+
+.workTitle {
+  color: #3b3b3b;
+}
+
+.workText {
+  min-height: 48px;
+  color: #919191;
+}
+
+@media (max-width: 767px) {
+  .workText {
+    min-height: 40px;
+    color: #919191;
+  }
+}
+
+.barTag {
+  color: #3b3b3b;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  text-align: center;
+}
+
+.tag {
+  background: #f1f1f1;
+  padding: 4px 12px;
+  border-radius: 10px;
+}
+
+.barPage {
+  display: flex;
+  gap: 16px;
+  text-align: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .barPage {
+    margin-top: 48px;
+  }
+}
+
+.page a {
+  padding: 2px 13px;
+  color: #3b3b3b;
+  border-radius: 4px;
+}
+
+.page a:hover {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+/* footer */
+
+.footer {
+  background: #fafafa;
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/footer-bg-lg.png);
+}
+
+.containerFooter {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+}
+
+@media (max-width: 767px) {
+  .containerFooter {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+}
+
+.boxConnection {
+  width: 686px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+@media (max-width: 767px) {
+  .boxConnection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+}
+
+.footerLogoImg {
+  width: 120px;
+}
+
+.connectionText {
+  color: #3b3b3b;
+}
+
+.connectionEmail {
+  color: #919191;
+}
+
+.boxConnectionBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.connectionBtn {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #c1c1c1;
+}
+
+@media (max-width: 767px) {
+  .connectionBtn {
+    width: 302px;
+  }
+}
+
+.colorReversed {
+  background: #000000;
+  color: #ffffff;
+  font-weight: 700;
+}
